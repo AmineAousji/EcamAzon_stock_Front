@@ -1,0 +1,16 @@
+<h2> Welcome to EcamAzon </h2>
+<form>
+    <div class="input">
+        <label>Worker name:</label>
+        <input required type="text" name="login" #name>
+    </div>
+    <div class="input">
+        <label>Password:</label>
+        <input required type="password" name="password" #password >
+    </div>
+    <div class="button-container">
+        <button type="button" class="btn" (click)="WorkerLogin(name.value, password.value)">Login</button>
+        <a></a>
+    </div>
+    
+</form>
