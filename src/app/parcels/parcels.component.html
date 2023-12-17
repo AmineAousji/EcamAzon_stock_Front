@@ -1,0 +1,14 @@
+<h1>Parcels</h1>
+
+<table align="center">
+    <tr>
+        <th scope="col">Status</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Contents</th>
+    </tr>
+    <tr *ngFor="let parcel of parcels">
+        <td>{{parcel.status}}</td>
+        <td>{{parcel.destination}}</td>
+        <td>{{parcel.contents}}</td>
+    </tr>
+</table>

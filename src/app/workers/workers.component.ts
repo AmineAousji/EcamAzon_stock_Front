@@ -15,11 +15,12 @@ export class WorkersComponent {
   WorkerLogin( name : string, password : string){
     this.worker.name = name;
     this.worker.password = password;
-    console.log(name);
-    console.log(password);
+    //console.log(name);
+    //console.log(password);
 
     this.workerService.check(this.worker).subscribe(
       data => {
+        console.log(data)
       if (data){
         this.worker = data
         this.workerService.login(this.worker).subscribe(data =>{

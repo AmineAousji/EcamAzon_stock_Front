@@ -9,17 +9,12 @@
 <mat-sidenav-container  class="white-bg">
   <mat-sidenav  #sidenav mode="side"> 
     <mat-nav-list>
-      <a mat-list-item > Parcels</a>
-      <a mat-list-item > Products</a>
-      <a mat-list-item > Ware House</a>
-      <a mat-list-item > Orders</a>
+      <a mat-list-item routerLink="parcels/list"> Parcels</a>
+      <a mat-list-item routerLink="products/" > Products</a>
+      <a mat-list-item routerLink="warehouse/list"> Ware House</a>
+      <a mat-list-item routerLink="orders"> Orders</a>
     </mat-nav-list>
-    <mat-divider></mat-divider>
-    <div class="bottom-nav">
-      <mat-nav-list>
-        <a mat-list-item > Se déconnecter</a>
-      </mat-nav-list>
-    </div>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <div>

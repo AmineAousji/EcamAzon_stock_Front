@@ -14,11 +14,17 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WorkersComponent } from './workers/workers.component';
+import { ParcelsComponent } from './parcels/parcels.component';
+import { OrdersComponent } from './orders/orders.component';
+import { NewParcelComponent } from './new-parcel/new-parcel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WorkersComponent
+    WorkersComponent,
+    ParcelsComponent,
+    OrdersComponent,
+    NewParcelComponent
   ],
   imports: [
     BrowserModule,

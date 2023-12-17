@@ -1,0 +1,19 @@
+<h1>Orders</h1>
+
+<table align="center">
+    <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">Articles</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Client name</th>
+        <th scope="col">Parcel</th>
+
+    </tr>
+    <tr *ngFor="let order of orders">
+        <td>{{order.order_id}}</td>
+        <td>{{order.articles}}</td>
+        <td>{{order.amount}}</td>
+        <td>{{order.client_name}}</td>
+        <td><button role="button" (click)="newParcel()">Create Parcel</button></td>
+    </tr>
+</table>

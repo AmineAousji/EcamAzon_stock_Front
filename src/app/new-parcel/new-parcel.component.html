@@ -1,0 +1,26 @@
+<h2 class="div-h2-newparcel">Create Parcel</h2>
+<div>
+    <form (ngSubmit)="addParcel()">
+      <label>Worker :</label>
+      <input [(ngModel)]="parcel.worker" name="worker" required>
+  
+      <label>Destination :</label>
+      <input [(ngModel)]="parcel.destination" name="destination" required>
+      
+      <label>Contents :</label>
+      <input [(ngModel)]="parcel.contents" name="contents" required>
+  
+      <label>Status :</label>
+      <input [(ngModel)]="parcel.status" name="status" required>
+
+      <label>ID user:</label>
+      <input [(ngModel)]="parcel.id_user" name="id_user" required>
+
+      <label>ID order :</label>
+      <input [(ngModel)]="parcel.id_order" name="id_order" required>
+  
+  
+      <button type="submit" >Create</button>
+    </form>
+  </div>
+
