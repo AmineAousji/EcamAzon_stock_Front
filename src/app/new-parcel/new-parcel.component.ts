@@ -17,6 +17,12 @@ export class NewParcelComponent {
     private parcelService : ParcelService,
   ){}
 
+  ngOnInit(): void {
+    const workerName = localStorage.getItem('name');
+    console.log('Worker Name:', workerName);
+    this.parcel.worker = workerName!;
+  }
+
   parcel: Parcel={worker:'', destination:'', contents:'', status:'', id_user:'', id_order:''}
 
   addParcel(): void{

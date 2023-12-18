@@ -1,0 +1,19 @@
+<h1>Products</h1>
+
+<table align="center">
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">WareHouse</th>
+
+    </tr>
+    <tr *ngFor="let parcel of products">
+        <td>{{parcel.name}}</td>
+        <td>{{parcel.quantity}}</td>
+        <td>{{parcel.price}}</td>
+        <td>{{parcel.description}}</td>
+        <td>{{parcel.wareHouse}}</td>
+    </tr>
+</table>

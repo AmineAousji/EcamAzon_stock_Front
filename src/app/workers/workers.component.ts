@@ -21,18 +21,24 @@ export class WorkersComponent {
     this.workerService.check(this.worker).subscribe(
       data => {
         console.log(data)
-      if (data){
-        this.worker = data
-        this.workerService.login(this.worker).subscribe(data =>{
-          console.log(data.token);
-          localStorage.setItem('token', data.token);
-          console.log(localStorage)
-          this.router.navigate(['parcels/list'])
-        })
-      }else {
-        console.log("user not found");
+        if (data) {
+          this.worker = data;
+          
+          // Assuming 'login' is a property in the worker object
+          const workerName = this.worker.name;
+    
+          this.workerService.login(this.worker).subscribe(data => {
+            console.log(data.token);
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('name', workerName);
+            console.log(localStorage);
+            this.router.navigate(['parcels/list']);
+          });
+        } else {
+          console.log("user not found");
+        }
       }
-    })
+    );
   }
 
 

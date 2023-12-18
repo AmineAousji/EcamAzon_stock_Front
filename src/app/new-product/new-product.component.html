@@ -1,0 +1,29 @@
+<div class="container">
+    <button class="top-right-button" (click)="getProducts()">List Products</button>
+    <h2 class="div-h2-product">Add a product :</h2>
+</div>
+<div>
+  <form (ngSubmit)="addProduct()">
+    <label>Name :</label>
+    <input [(ngModel)]="product.name" name="name" required>
+
+    <label>Quantity :</label>
+    <input [(ngModel)]="product.quantity" name="quantity" required>
+    
+    <label>Price :</label>
+    <input [(ngModel)]="product.price" name="price" required>
+
+    <label>Description :</label>
+    <input [(ngModel)]="product.description" name="description" required>
+
+    <label>Picture URL :</label>
+    <input [(ngModel)]="product.picture" name="picture" required>
+
+    <label>Warehouse :</label>
+    <select [(ngModel)]="product.wareHouse" name="wareHouse">
+      <option *ngFor="let warehouse of warehouses" [value]="warehouse.wareHouse_name">{{warehouse.wareHouse_name}}</option>
+    </select>
+
+    <button type="submit" >Add a product</button>
+  </form>
+</div>

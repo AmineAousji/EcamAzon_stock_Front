@@ -17,6 +17,8 @@ import { WorkersComponent } from './workers/workers.component';
 import { ParcelsComponent } from './parcels/parcels.component';
 import { OrdersComponent } from './orders/orders.component';
 import { NewParcelComponent } from './new-parcel/new-parcel.component';
+import { NewProductComponent } from './new-product/new-product.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NewParcelComponent } from './new-parcel/new-parcel.component';
     WorkersComponent,
     ParcelsComponent,
     OrdersComponent,
-    NewParcelComponent
+    NewParcelComponent,
+    NewProductComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
