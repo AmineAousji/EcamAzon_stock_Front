@@ -10,11 +10,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class AppComponent  implements OnInit {
 
   @ViewChild('sidenav') sidenav!: MatSidenav;
+  workerName: string | null = null;
 
   ngOnInit() {
     this.sidenav.mode = 'side';
     this.sidenav.open();
   }
+
 
   toggle() {
     this.sidenav?.toggle();

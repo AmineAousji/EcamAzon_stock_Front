@@ -19,4 +19,8 @@ export class WareHouseService {
   getWareHouse(): Observable <any>{
     return this.http.get(this.baseUrl + 'warehouses/list');
   }
+
+  addWareHouse(warehouse: any):Observable <any>{
+    return this.http.post(this.baseUrl + 'warehouses/', warehouse);
+  }
 }

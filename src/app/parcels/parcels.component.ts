@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {Worker, WorkerService} from '../worker.service';
+import {WareHouse, WareHouseService} from '../ware-house.service';
+import {Product, ProductService} from '../product.service';
 import {Parcel, ParcelService} from '../parcel.service';
 import { Router } from '@angular/router';
-
 
 
 @Component({
@@ -12,14 +12,16 @@ import { Router } from '@angular/router';
 })
 export class ParcelsComponent {
 
-  workers : Worker[] = []
-  parcels: Parcel[] = []
+  warehouses : WareHouse[] = [];
+  parcels: Parcel[] = [];
+  products: Product[] = [];
 
   parcel: Parcel={worker:'', contents:'', status:'', id_user:'', id_order:''}
 
   constructor(
     private parcelService : ParcelService,
-    private workerService : WorkerService,
+    private warehouseService : WareHouseService,
+    private productService : ProductService,
     private routers:Router
   ){}
 
@@ -30,19 +32,25 @@ export class ParcelsComponent {
         console.log(this.parcels);
       }
     );
+    this.warehouseService.getWareHouse().subscribe(
+      data => {
+        this.warehouses = data;
+      }
+    );
+    this.productService.getProducts().subscribe(
+      data => {
+        this.products = data;
+      }
+    );
+
   }
 
   addParcel(): void{
     this.parcelService.addParcel(this.parcel).subscribe(() => {
       this.parcel = {worker:'', contents:'', status:'', id_user:'', id_order:''};
-
       this.routers.navigate(['parcels/list'])
     });
   }
-
-  // getWorker(): void{
-  //   this.workerService.login()
-  // }
 
 
 }

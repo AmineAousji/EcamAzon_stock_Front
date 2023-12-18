@@ -4,9 +4,49 @@
     <tr>
         <th scope="col">Status</th>
         <th scope="col">Contents</th>
+        <th scope="col"> Order ID</th>
+        <th scope="col"> User ID</th>
+        <th scope="col"> Worker</th>
     </tr>
     <tr *ngFor="let parcel of parcels">
         <td>{{parcel.status}}</td>
         <td>{{parcel.contents}}</td>
+        <td>{{parcel.id_order}}</td>
+        <td>{{parcel.id_user}}</td>
+        <td>{{parcel.worker}}</td>
+    </tr>
+</table>
+<br>
+
+<h1>Warehouses</h1>
+<table align="center">
+    <tr>
+        <th scope="col">Warehouse name</th>
+        <th scope="col">Warehouse adress</th>
+    </tr>
+    <tr *ngFor="let warehouse of warehouses">
+        <td>{{warehouse.wareHouse_name}}</td>
+        <td>{{warehouse.wareHouse_adress}}</td>
+    </tr>
+</table>
+<br>
+
+<h1>Products</h1>
+<table align="center">
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"> Price</th>
+        <th scope="col"> Description</th>
+        <th scope="col"> Picture</th>
+        <th scope="col"> Warehouse</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.name}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.picture}}</td>
+        <td>{{product.wareHouse}}</td>
     </tr>
 </table>

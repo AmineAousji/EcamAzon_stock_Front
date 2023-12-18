@@ -1,0 +1,13 @@
+<h2 class="div-h2-product">Create Warehouse</h2>
+<div class="div-warehouse" >
+    <form  (ngSubmit)="addWarehouse()">
+      <label>wareHouse name :</label>
+      <input [(ngModel)]="warehouse.wareHouse_name" name="wareHouse_name" required class="centered-input">
+      
+      <label>wareHouse adress :</label>
+      <input [(ngModel)]="warehouse.wareHouse_adress" name="wareHouse_adress" required class="centered-input">  
+  
+      <button type="submit" >Create Warehouse</button>
+    </form>
+  </div>
+

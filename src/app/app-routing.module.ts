@@ -6,6 +6,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { NewParcelComponent } from './new-parcel/new-parcel.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import {ProductsComponent} from './products/products.component';
+import { WarehouseComponent } from './warehouse/warehouse.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'parcels', component: NewParcelComponent },
   { path: 'products', component: NewProductComponent },
   { path: 'products/list', component: ProductsComponent },
+  { path: 'warehouses', component: WarehouseComponent },
 
 
 

@@ -32,6 +32,7 @@ export class NewProductComponent {
   addProduct(): void{
     this.productService.addProduct(this.product).subscribe(() => {
       this.product = {name: '', quantity: 0 , price: '', description: '', picture: '', wareHouse: ''};
+      this.router.navigate(['parcels/list']);
     });
   }
 

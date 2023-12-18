@@ -44,7 +44,7 @@ export class NewParcelComponent {
   addParcel(): void{
     this.parcelService.addParcel(this.parcel).subscribe(() => {
       this.parcel = {worker:'', contents:'', status:'', id_user:'', id_order:''};
-      this.router.navigate(['parcels/list'])
+      this.router.navigate(['parcels/list']);
     });
   }
 
