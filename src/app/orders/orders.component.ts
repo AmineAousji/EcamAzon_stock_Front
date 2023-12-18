@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Order, OrdersService} from '../orders.service';
 import { Router } from '@angular/router';
+import { NavigationExtras } from '@angular/router';
 
 
 
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class OrdersComponent {
   orders : Order[] = [];
+  selectedOrder: any = {};
 
 
   constructor(
@@ -27,8 +29,15 @@ export class OrdersComponent {
     );
   }
 
-  newParcel() {
-    this.router.navigate(['/parcels']);
+  newParcel(order:any) {
+    this.selectedOrder = order;
+    console.log('Selected Order:', this.selectedOrder);
+
+    const navigationExtras: NavigationExtras = {
+      queryParams: { order: JSON.stringify(this.selectedOrder) }
+    };
+
+    this.router.navigate(['/parcels'], { queryParams: { order: JSON.stringify(this.selectedOrder) } });
   }
 
   

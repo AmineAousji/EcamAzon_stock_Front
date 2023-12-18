@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
 
 export class Parcel {
   "worker": string;
-  "destination": string;
   "contents": string;
   "status": string;
   "id_user": string;

@@ -2,22 +2,22 @@
 <div class="new-parcel-form">
     <form  (ngSubmit)="addParcel()">
       <label>Worker :</label>
-      <input [(ngModel)]="parcel.worker" name="worker" required disabled="true">
-  
-      <label>Destination :</label>
-      <input [(ngModel)]="parcel.destination" name="destination" required>
+      <input [(ngModel)]="parcel.worker" name="worker" required disabled="true" class="centered-input">
       
       <label>Contents :</label>
-      <input [(ngModel)]="parcel.contents" name="contents" required>
+      <input [(ngModel)]="parcel.contents" name="contents" required disabled="true" class="centered-input">
   
       <label>Status :</label>
-      <input [(ngModel)]="parcel.status" name="status" required>
+      <select [(ngModel)]="parcel.status" name="status" required required class="centered-input">
+        <option value="ready">Ready</option>
+        <option value="not-ready">Not Ready</option>
+      </select>
 
       <label>ID user:</label>
-      <input [(ngModel)]="parcel.id_user" name="id_user" required>
+      <input [(ngModel)]="parcel.id_user" name="id_user" required disabled="true" class="centered-input">
 
       <label>ID order :</label>
-      <input [(ngModel)]="parcel.id_order" name="id_order" required>
+      <input [(ngModel)]="parcel.id_order" name="id_order" required disabled="true" class="centered-input">
   
   
       <button type="submit" >Create Parcel</button>

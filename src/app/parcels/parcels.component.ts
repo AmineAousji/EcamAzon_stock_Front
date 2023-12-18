@@ -15,7 +15,7 @@ export class ParcelsComponent {
   workers : Worker[] = []
   parcels: Parcel[] = []
 
-  parcel: Parcel={worker:'', destination:'', contents:'', status:'', id_user:'', id_order:''}
+  parcel: Parcel={worker:'', contents:'', status:'', id_user:'', id_order:''}
 
   constructor(
     private parcelService : ParcelService,
@@ -34,7 +34,7 @@ export class ParcelsComponent {
 
   addParcel(): void{
     this.parcelService.addParcel(this.parcel).subscribe(() => {
-      this.parcel = {worker:'', destination:'', contents:'', status:'', id_user:'', id_order:''};
+      this.parcel = {worker:'', contents:'', status:'', id_user:'', id_order:''};
 
       this.routers.navigate(['parcels/list'])
     });
