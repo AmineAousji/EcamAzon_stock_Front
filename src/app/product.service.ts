@@ -18,7 +18,7 @@ export class Product {
 })
 export class ProductService {
 
-  baseUrl: string = 'http://localhost:3000/api/';
+  baseUrl: string = 'http://localhost:30003/api/';
 
   constructor(private http: HttpClient) {}
 

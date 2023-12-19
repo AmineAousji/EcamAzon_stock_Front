@@ -12,7 +12,7 @@ export class WareHouse {
 })
 export class WareHouseService {
 
-  baseUrl: string = 'http://localhost:3000/api/';
+  baseUrl: string = 'http://localhost:30003/api/';
 
   constructor(private http: HttpClient) {}
 
